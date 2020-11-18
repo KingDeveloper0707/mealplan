@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="134.734" viewBox="0 0 272 134.734">
+  <g id="Group_18" data-name="Group 18" transform="translate(0 -0.208)">
+    <text id="_39" data-name="39" transform="translate(152 0.208)" fill="#259e59" font-size="30" letter-spacing="0.033em"><tspan x="0" y="32">39</tspan></text>
+    <text id="_40" data-name="40" transform="translate(231 1.208)" fill="#259e59" font-size="30" letter-spacing="0.033em"><tspan x="0" y="32">40</tspan></text>
+    <path id="Line_4" data-name="Line 4" d="M1,0V86.145" transform="translate(228.5 34.061)" fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Line_4-2" data-name="Line 4" d="M1.5.4V51.228" transform="translate(149 33.544)" fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Stacked_Group" data-name="Stacked Group" transform="translate(0 67.044)">
+      <g id="Group_24" data-name="Group 24">
+        <path id="Rectangle_15_Copy" data-name="Rectangle 15 Copy" d="M15,0h0A15,15,0,0,1,30,15V150.755a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(151 0.755) rotate(90)" fill="#c0d2fc"/>
+        <text id="Actual_Age" data-name="Actual Age" transform="translate(0 8)" fill="#222" font-size="14" letter-spacing="0.063em"><tspan x="0" y="15" xml:space="preserve">  ACTUAL AGE</tspan></text>
+      </g>
+      <g id="Group_23" data-name="Group 23" transform="translate(0 37)">
+        <path id="Rectangle_15" data-name="Rectangle 15" d="M15,0h0A15,15,0,0,1,30,15V229.9a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(230 0.898) rotate(90)" fill="#ed2738"/>
+        <text id="Metabolic_age" data-name="Metabolic age" transform="translate(0 7)" fill="#fff" font-size="14" letter-spacing="0.071em"><tspan x="0" y="15" xml:space="preserve">  METABOLIC AGE</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

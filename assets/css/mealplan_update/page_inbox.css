@@ -1,0 +1,2 @@
+#inbox-page{color:#272729;font-family:'Proxima Nova Semibold'}#inbox-page .emails-wrapper{min-width:480px;height:calc(100vh - 140px);overflow:auto}#inbox-page .emails-wrapper .list-group .list-group-item{background-color:#F9F9F8}#inbox-page .emails-wrapper .list-group .list-group-item.unread{color:black}#inbox-page .emails-wrapper .list-group .list-group-item.unread.active{color:white}#inbox-page .emails-wrapper .list-group .list-group-item.active{background-color:#6B76FF}#inbox-page .email-wrapper{flex:1 1 0}
+/*# sourceMappingURL=page_inbox.css.map */

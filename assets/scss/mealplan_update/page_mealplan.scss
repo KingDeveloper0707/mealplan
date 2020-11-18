@@ -1,0 +1,413 @@
+@import 'variable';
+@import '../variable';
+@import 'basetimer';
+
+#wrapper {
+    #content-wrapper {
+        background-color: white;
+    }
+}
+
+.hometab-wrapper {
+    background-color: $form-control-background-color;
+    padding-top: 1.5rem;
+    /*padding-left: 3rem;*/
+    .homeTab {
+        border-bottom: none;
+
+        .nav-item {
+            .nav-link {
+                position: relative;
+                border-top-left-radius: $home-tabs-border-width; 
+                border-top-right-radius: $home-tabs-border-width; 
+                border: none;
+                padding: 1rem 2rem;
+                font-family: 'Proxima Nova Semibold';
+                color: $color-text;
+
+                span {
+                    padding-bottom: 1rem;
+                }
+
+                &.active:before, &.active:after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    background-color: white;
+                    z-index: 1;
+                }
+                &.active:before {
+                    left: -10px;
+                }
+                &.active:after {
+                    right: -10px;
+                }
+                &.active span {
+                    border-bottom: 3px solid $color-hover;
+                    &:before, &:after {
+                        content: '';
+                        background-color: $form-control-background-color;
+                        width: 20px;
+                        height: 20px;
+                        z-index: 2;
+                        position: absolute;
+                        bottom: 1px;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        border-radius: 10px;
+                    }
+                    &:before {
+                        left: -20px;
+                    }
+                    &:after {
+                        right: -20px;
+                    }
+                }
+                &#collection-tab {
+                    i {
+                        margin-left: .2rem;
+                        color: #BABBC2;
+                    }
+                }
+            }
+        }
+        .badge-wrapper {
+            margin-left: auto;
+            .badge {
+                border-radius: 2rem;
+                color: white;
+                padding: 0.3rem 1.2rem;
+                font-weight: 100;
+                font-size: .8rem;
+
+                &.verified {
+                    background-color: $color-badge-verified;
+                    i {
+                        border-radius: 50%;
+                        background-color: white;
+                        color: $color-badge-verified;
+                        margin-right: .3rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.tabcontent-wrapper {
+    padding-bottom: 2rem;
+
+    #homeTabContent.tab-content {
+        > .tab-pane {
+            padding-top: 2rem;
+            .heading-wrapper {
+                display: flex;
+                margin-bottom: 1rem;
+
+                .text-week-start {
+                    color: #353B4D;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+                a.btn-download {
+                    align-self: flex-end;
+                    margin-left: auto;
+                    background-color: $color-hover;
+                    color: white;
+                    font-family: 'Proxima Nova Semibold';
+                    font-size: .8rem;
+
+                    i {
+                        margin-right: .3rem;                        
+                    }                    
+                }
+                .weeks-container {
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    z-index: 1041;
+                    height: 48px;
+                    border: 1px solid #272729;
+                    border-radius: .5rem;
+
+                    .backdrop-note {
+                        position: absolute;
+                        color: white;
+                        left: 14rem;
+                        width: 21rem;
+                        top: 7rem;
+                        margin-bottom: 0;
+                    }
+
+                    .edd-root {
+                        text-align: left;
+                        background-color: white;
+                        font-family: 'Proxima Nova Bold';
+                        font-size: 1.25rem;
+                        border-radius: .5rem;
+                        letter-spacing: 0.1rem;
+                        text-transform: uppercase;
+                        z-index: 1;
+                        color: #272729;
+                    }
+
+                    .edd-root::after {
+                        content: none !important
+                    }
+
+                    .edd-head {
+                        border: none !important
+                    }
+
+                    .edd-head .edd-value {
+                        padding: 8px 44px 8px 12px !important
+                    }
+
+                    .edd-body {
+                        top: calc(100% + 4px) !important
+                    }
+
+                    .edd-arrow {
+                        display: flex;
+                        align-items: center;
+                        width: 28px !important;
+                        height: 28px !important;
+                        right: 12px !important;
+                        top: 10px !important;
+                        margin-top: 0 !important;
+                        border: none !important
+                    }
+
+                    .edd-arrow::before {
+                        content: none !important
+                    }
+
+                    .edd-option {
+                        padding: 8px 44px 8px 12px !important
+                    }
+
+                    .edd-option span.badge {
+                        position: absolute;
+                        top: .7rem;
+                        right: .3rem;
+                        color: #00A545;
+                        font-size: .5rem;
+                        border-radius: 1rem;
+                        background-color: #F0F0F5;
+                        padding: .3rem
+                    }
+
+                    .edd-option-selected::before {
+                        content: none !important
+                    }
+
+                    .edd-option-focused:not(.edd-option-disabled) {
+                        background: #DDDFF4;
+                        position: relative;
+                        z-index: 3;
+                        color: #272729 !important
+                    }
+
+                    .edd-gradient-top,.edd-gradient-bottom {
+                        display: none !important
+                    }
+
+                    .edd-root.edd-root-focused::after {
+                        transform: none !important
+                    }
+
+                    @media (max-width: 767.98px) {
+                        .edd-root {
+                            background-color: #224390;
+                            border-color: #224390;
+                            color: white;
+                            border-radius: 0
+                        }
+
+                        .edd-arrow {
+                            filter: brightness(0) invert(1)
+                        }
+
+                        .edd-option {
+                            box-shadow: 0 -1px 0px 0px white;
+                            background-color: #224390
+                        }
+
+                        .edd-option-focused:not(.edd-option-disabled) {
+                            background: white;
+                            color: #224390 !important
+                        }
+                    }
+
+                }                
+            }
+            .weekdays-wrapper {
+                border: 1px solid #e2e2e4;
+                border-radius: .5rem;
+                box-shadow: 0 0 4px 0px #7b7b7b;
+
+                .hometab-wrapper {
+                    border-radius: .5rem .5rem 0 0;
+                }
+
+                #dayTab {
+                    border-bottom: none;
+                    box-shadow: 0 4px 7px 2px #ececec;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    .nav-item {
+                        .nav-link {
+                            border: none;
+                            padding-top: 1rem;
+                            padding-bottom: 1rem;
+                            font-family: 'Proxima Nova Semibold';
+                            color: $color-text;
+
+                            &.active {
+                                color: $color-hover;
+                                border-bottom: 3px solid $color-hover;
+                            }
+                        }
+                    }
+                }
+
+                #weekdayTabContent {
+                    .tab-pane {
+
+                    }
+                }
+            }
+            .checkin-wrapper {
+                .countdown-wrapper {
+                    height: 100%;
+                    background-image: url("#{$keycdn_img_url}mp-countdown-back-min.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+
+                    .inner-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: white;
+                        border-radius: .5rem;
+                        padding: 1rem;
+
+                        p.heading {
+                            color: $color-text;
+                            font-family: 'Proxima Nova Semibold';
+                            max-width: 300px;
+                            text-align: center;
+                        }
+                        .countdown-widget {
+                            .base-timer {
+                                .base-timer__label {
+                                    p.left-days-num {
+                                        font-size: 2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }                
+                .text-wrapper {
+                    padding: 1rem;
+                    h2 {
+                        color: $color-text;
+                        font-family: 'Proxima Nova Bold';
+                    }
+                }
+            }
+        }
+        .card.meal-card {
+            border: none;
+
+            p.type {
+                text-transform: uppercase;
+                color: $color-text;
+                font-family: 'Proxima Nova Semibold';
+                font-size: .875rem;
+                letter-spacing: 1px;
+            }
+            .meal-body {
+                text-decoration: none;
+
+                .meal-name-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-text;
+                    padding: 0 0.5rem;
+
+                    height: 5rem;
+                    p.meal-name {                        
+                        color: white;
+                        font-family: 'Proxima Nova Semibold';
+                        margin-bottom: 0;                        
+                    }
+                }
+                .meal-img {
+                    height: 200px;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    background-repeat: no-repeat !important;
+                }
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+            .favorite-wrapper {
+                text-align: right;
+                font-family: 'Proxima Nova Semibold';
+                font-size: .75rem;                                
+                color: $color-text;
+
+                i {
+                    &.fas {
+                        color: #FF695B;
+                    }
+                    &.far {
+                        color: #BABBC2;
+                    }
+                }
+            }
+        }
+        .select-meal-type {
+            color: $color-text;
+            font-family: 'Proxima Nova Semibold';
+        }
+        .btn.btn-filter {
+            background-color: $color-hover;
+            color: white;
+        }
+    }
+}
+
+.weekselect-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+
+    &.fade {
+        opacity: 0;
+    }
+    &.show {
+        opacity: .5
+    }
+}

@@ -1,0 +1,178 @@
+@import 'variable';
+
+/*custom font*/
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('#{$font_url}proxima_ssv/proximanova-regular-webfont.woff2') format("woff2"), url('#{$font_url}proxima_ssv/proximanova-regular-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('#{$font_url}proxima_ssv/proxima_nova_bold-webfont.woff2') format("woff2"), url('#{$font_url}proxima_ssv/proxima_nova_bold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Extra Bold';
+    src: url('#{$font_url}proxima_ssv/proxima_nova_extrabold-webfont.woff2') format("woff2"), url('#{$font_url}proxima_ssv/proxima_nova_extrabold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url('#{$font_url}proxima_ssv/proxima_nova_black-webfont.woff2') format("woff2"), url('#{$font_url}proxima_ssv/proxima_nova_black-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('#{$font_url}proxima_ssv/ProximaNova-Semibold.woff2') format("woff2"), url('#{$font_url}proxima_ssv/ProximaNova-Semibold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('#{$font_url}futura/futura_medium_bt-webfont.woff2') format("woff2"), url('#{$font_url}futura/futura_medium_bt-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Futura Bold';
+    src: url('#{$font_url}futura/Futura-Bold.woff2') format("woff2"), url('#{$font_url}futura/Futura-Bold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Futura Condensed Medium';
+    src: url('#{$font_url}futura/futura_medium_condensed_bt-webfont.woff2') format("woff2"), url('#{$font_url}futura/futura_medium_condensed_bt-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'DINCondensed Bold';
+    src: url('#{$font_url}dincondensed-bold-webfont.woff2') format("woff2"), url('#{$font_url}dincondensed-bold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Caveat Regular';
+    src: url('#{$font_url}caveat/caveat-regular-webfont.woff2') format("woff2"), url('#{$font_url}caveat/caveat-regular-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'CervoNeue-RegularNeue';
+    src: url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-regularneue-webfont.woff2') format("woff2"), url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-regularneue-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'CervoNeue-BoldNeue';
+    src: url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-boldneue-webfont.woff2') format("woff2"), url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-boldneue-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'CervoNeue-BlackNeue';
+    src: url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-blackneue-webfont.woff2') format("woff2"), url('#{$font_url}cervoneue/typoforge_studio_-_cervoneue-blackneue-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron Regular';
+    src: url('#{$font_url}aileron/Aileron-Regular.woff2') format("woff2"), url('#{$font_url}Aileron-Regular.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron Bold';
+    src: url('#{$font_url}aileron/Aileron-Bold.woff2') format("woff2"), url('#{$font_url}Aileron-Bold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron SemiBold';
+    src: url('#{$font_url}aileron/Aileron-SemiBold.woff2') format("woff2"), url('#{$font_url}Aileron-SemiBold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('#{$font_url}inter/Inter-Regular.woff2') format("woff2"), url('#{$font_url}Inter-Regular.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('#{$font_url}inter/Inter-Bold.woff2') format("woff2"), url('#{$font_url}Inter-Bold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('#{$font_url}inter/Inter-SemiBold.woff2') format("woff2"), url('#{$font_url}Inter-SemiBold.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Light';
+    src: url('#{$font_url}inter/Inter-Light.woff2') format("woff2"), url('#{$font_url}Inter-Light.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('#{$font_url}inter/Inter-Medium.woff2') format("woff2"), url('#{$font_url}Inter-Medium.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

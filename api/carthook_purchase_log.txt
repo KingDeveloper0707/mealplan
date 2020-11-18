@@ -1,0 +1,5 @@
+{"email":"tarasprystavskyj@hotmail.com","orderid":"testorderid","product_title":"Custom Keto Meal Plan"}
+{"email":"tarasprystavskyj@hotmail.com","orderid":"testorderid","product_title":"Custom Keto Meal Plan"}
+{"first_name":"t","last_name":"t","product_title":"Custom Keto Meal Plan - 12 Month","email":"tarasprystavskyj@hotmail.com","total_price":"39.00","orderid":"testorderidtestorderid","page":"first upsell"}
+{"first_name":"t","last_name":"t","product_title":"Custom Keto Meal Plan - 12 Month","email":"tarasprystavskyj@hotmail.com","total_price":"39.00","orderid":"testorderidtestorderid","page":"first upsell"}
+{"first_name":"t","last_name":"t","product_title":"Custom Keto Meal Plan - 12 Month","email":"tarasprystavskyj@hotmail.com","total_price":"39.00","orderid":"testorderidtestorderid","page":"first upsell"}

@@ -1,0 +1,68 @@
+@import 'variable';
+
+html {
+    /*font-size: 18px;*/
+}
+
+.navbar {
+    display: none;
+}
+
+.top-link {
+    color: black;    
+}
+
+header.masthead {
+    min-height: 82vh;
+    display: flex;
+    padding-top: 3rem;
+
+    h1 {
+        font-family: 'Proxima Nova Bold';
+    }
+
+    .subtitle {
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    ul {
+        display: inline-block;
+        text-align: left;
+
+        li {
+            list-style-type: none;
+            display: flex;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                margin-right: .5rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    }    
+}
+
+footer {
+    display: block;
+}
+
+
+@media (min-width: 768px) {
+    header.masthead h1 {
+        font-size: 3.8vw;
+    }
+}
+@media (min-width: 1200px) {
+    header.masthead h1 {
+        font-size: 2.4rem;
+    }
+}
+@media (max-width: 768px) {
+    header.masthead {
+        height: auto;
+    }
+}

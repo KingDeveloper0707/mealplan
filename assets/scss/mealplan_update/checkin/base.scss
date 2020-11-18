@@ -1,0 +1,38 @@
+body {
+    font-family: 'Inter Semibold';
+}
+.logo {
+    display: inline-block;
+    svg {
+        vertical-align: top;
+    }
+    span {
+        font-family: 'Proxima Nova Bold';
+        letter-spacing: 3px;
+        font-size: 12.8px;
+        margin-left: 4px;
+        vertical-align: top;
+        line-height: 1.7;
+    }
+    &.logo-gray {
+        span {
+            color: #8D8D94;
+        }
+    }
+}
+
+.shadow-container {
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    .col-lg-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @media (min-width: 800px) {
+        & {
+            max-width: 800px;
+        }
+    }
+}

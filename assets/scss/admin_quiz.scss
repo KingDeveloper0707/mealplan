@@ -1,0 +1,33 @@
+label.quiz-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    margin-left: 2rem;
+}
+
+.female-option {
+    display: none;
+}
+
+form#mainform {
+    &.male-theme span {
+        &.male-option {
+            display: inline-block;
+        }
+        &.female-option {
+            display: none;
+        }
+    }
+    &.female-theme span {
+        &.female-option {
+            display: inline-block;
+        }
+        &.male-option {
+            display: none;
+        }
+    }
+}

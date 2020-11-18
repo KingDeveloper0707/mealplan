@@ -1,0 +1,99 @@
+@import 'variable';
+
+#upgrade-page {
+    color: $color-text;
+    h1, h2, p.subheading {
+        font-family: 'Proxima Nova Semibold';
+    }
+    h1 {
+        color: red;
+    }
+
+
+    .row {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .row:nth-child(2), .row:nth-child(3), .row:nth-child(4) {
+        border: 2px solid #F0F0F5;
+    }
+
+    [class*='col-'] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 300px;
+        }
+    }
+    .row:nth-child(2) img, .row:nth-child(3) img, .row:nth-child(4) img {
+        max-width: 200px;
+    }
+
+    .text-wrapper {
+
+        .circle-number {
+            color: white;
+            font-family: 'Proxima Nova Semibold';
+            font-size: 0.75rem;
+            border-radius: 50%;
+            padding: 0.6rem;
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1rem;
+            margin-bottom: .5rem;
+
+            &.upgrade-number-1 {
+                background-color: #E6AD47;
+                & + h2 {
+                    color: #E6AD47;
+                }
+            }
+            &.upgrade-number-2 {
+                background-color: #20CF9F;
+                & + h2 {
+                    color: #20CF9F;
+                }
+            }
+            &.upgrade-number-3 {
+                background-color: #FF695B;
+                & + h2 {
+                    color: #FF695B;
+                }
+            }
+        }
+
+    }
+
+    .row:nth-child(2) .text-wrapper, .row:nth-child(3) .text-wrapper, .row:nth-child(4) .text-wrapper {
+        text-align: center;
+    }
+
+    table {
+        margin: 1rem auto;
+        tr {
+            &.spacer {
+                height: 1rem;
+            }
+            &.color-green {
+                color: #39B86E;
+            }
+            &.color-red {
+                color: red;
+            }
+            &.border-bottom {
+                border-bottom: 1px solid lightgray;
+            }
+            &.border-top {
+                border-top: 1px solid lightgray;
+            }
+        }
+    }
+
+}

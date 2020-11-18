@@ -1,0 +1,150 @@
+{{>header}}
+<table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: {{>table-header-color}}; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="{{>table-header-color}}">
+    <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+            <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                    <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                        <h2 style="font-family: {{>font}}; box-sizing: border-box; margin: 0;font-size: 16px;">
+                            {{translate "Hello"}} {{account.contact.first}} {{account.contact.last}},
+                        </h2>
+                        <h4 style="margin: 5px 0;">
+                            {{translate "Thank you for your purchase. Below is your product delivery information"}}.
+                        </h4>
+                        <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Manage Your Orders"}}</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: #fff; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="#fff">
+    <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 10px 0px 10px 20px; border-bottom:{{>border-style}};" bgcolor="{{>table-header-color}}">
+            <div>
+                       {{translate "Gift purchase for"}} {{recipient.contact.first}} {{recipient.contact.last}}. {{translate "Fulfillment details, including any license keys or download links, are emailed to the recipient."}}
+                    </div>
+        </td>
+    </tr>
+    {{#each order.items}}
+        <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+            <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;border-bottom:{{>border-style}};" valign="top">
+                <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                    <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                            <h3 style="margin: 0px; font-size: 14px;">
+                                {{display}} 
+                                {{#if childItems}}
+                                    <span class="label" style="display: inline; padding: 3px 7px; font-size: 9px; color: #fff; text-align: center; white-space: nowrap; vertical-align: top; border-radius: 3px; background-color: green;">
+                                        {{translate "Bundle"}}
+                                    </span>
+                                {{/if}}
+                            </h3> 
+                        </td>
+                        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px; text-align:right;" valign="top" align="right">
+                            <div>
+                                {{#if unitDiscountValue}}
+                                    <del style="font-size: 11px;">
+                                        {{priceTotalDisplay}}
+                                    </del>
+                                {{/if}}
+                            </div>
+                            <div>
+                                <strong class="price" style="font-size: 14px;color: #a94442;"> {{subtotalDisplay}}</strong>
+                                <span class="label" style="display: inline; padding: 3px 7px; font-size: 9px; color: #fff; text-align: center; white-space: nowrap; vertical-align: top; border-radius: 3px; background-color: #777;">
+                                    x {{quantity}}
+                                </span>
+                            </div>
+                            {{#if unitDiscountValue}}
+                                <div class="saved" style="font-size: 11px;color: #3c763d;">
+                                    You saved {{discountTotalDisplay}} ({{discountPercent}})
+                                </div>
+                            {{/if}}
+                        </td>
+                    </tr>
+                    {{#if childItems}}
+                        <tr>
+                            <td colspan="2">
+                                <div style="border: {{>border-style}}; padding:10px;">
+                                    {{#each childItems}}
+                                        <h3 style="margin: 0px; font-size: 14px;">{{display}}</h3>
+                                    {{/each}}
+                                </div>
+                            </td>
+                        </tr>
+                    {{/if}}
+                                    </table>
+            </td>
+        </tr>
+    {{/each}}
+  
+    <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px; border-top:{{>border-style}};" bgcolor="{{>table-header-color}}">
+            <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                    <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 11px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                        {{#if order.subtotal}}
+                             <div>
+                                 {{translate "Charges will appear on your bill as"}} {{order.billDescriptor}}
+                             </div>
+                        {{/if}}
+                        <div>
+                            <strong>{{translate "Order Reference"}}:</strong> <a href="{{account.url}}" class="blue" style="text-decoration: none; color: #337ab7;">{{order.reference}}</a>
+                        </div>
+                        <div>
+                            <a href="{{order.invoiceUrl}}" style="text-decoration: none; color: #337ab7;">{{translate "View Invoice"}}</a>
+                        </div>
+                        {{#if order.contact.address.address1}}
+                            <div style="margin: 20px 0 0;">
+                                <strong>{{translate "Shipping Address"}}:</strong>
+                            </div>
+                            <div style="margin: 0 0 0 10px;">
+                                <div>
+                                    {{order.contact.fullName}}
+                                </div>
+                                <div>
+                                    {{order.contact.address.address1}}
+                                </div>
+                                {{#if order.contact.address.address2}}
+                                    <div>
+                                        {{order.contact.address.address2}}
+                                    </div>
+                                {{/if}}
+                                <div>
+                                    {{order.contact.address.addressCity}}, {{order.contact.address.addressRegionDisplay}} {{order.contact.address.addressPostalCode}}
+                                </div>
+                                <div>
+                                    {{order.contact.address.addressCountryDisplay}}
+                                </div>
+                            </div>
+                        {{/if}}
+                    </td>
+                    <td style="font-family: {{>font}}; box-sizing: border-box; text-align:right; font-size: 11px; vertical-align: top; margin: 0; padding: 0px;" valign="top" align="right">
+                        {{#if order.taxDisplay}}
+                            <div>
+                                <strong>{{translate "Tax"}}: {{order.taxDisplay}}</strong>
+                            </div>
+                        {{/if}} 
+                        {{#if order.discountWithTax}}
+                            <div class="saved" style="color: #3c763d;">
+                                <strong>{{translate "You saved"}}: {{order.discountDisplay}}</strong>
+                            </div>
+                        {{/if}}
+                        {{#if order.coupons}}
+                            <div>
+                                {{translate "Coupon Code"}}: 
+                                {{#each order.coupons}} 
+                                    {{this}}
+                                {{/each}}
+                            </div>
+                        {{/if}}
+                        <h3 style="margin: 5px 0;font-size: 14px;color: #a94442;" class="price">
+                            {{translate "Total"}}: {{order.totalDisplay}}
+                        </h3> 
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{{>footer}}"

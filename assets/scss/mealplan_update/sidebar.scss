@@ -1,0 +1,34 @@
+@import 'variable';
+
+.bg-sidebar {
+    background-color: $color-sidebar-bg !important;
+}
+
+.sidebar {
+    box-shadow: 1px 0px 20px 0px #eeeeee;
+    z-index: 0;
+
+    .nav-item.active {
+        background-color: $color-sidebar-active;
+        .nav-link {
+            color: white;
+        }
+    }
+
+    .nav-item .nav-link .badge-counter, .topbar .nav-item .nav-link .badge-counter {	
+        margin-top: -0.55rem;
+        border-radius: 50%;
+        width: 1.8rem;
+        padding: 0.5rem 0.4rem;
+        border: solid 1px white;
+        height: 1.8rem;
+    }
+
+    @media (min-width: 768px) {
+        .nav-item .nav-link i {
+            font-size: 1.15rem;
+            margin-right: 0.85rem;
+        }
+    }
+
+}

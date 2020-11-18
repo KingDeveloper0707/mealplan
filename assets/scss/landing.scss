@@ -1,0 +1,328 @@
+@import 'variable';
+
+@import '../../node_modules/bootstrap/scss/_functions';
+@import '../../node_modules/bootstrap/scss/_variables';
+@import '../../node_modules/bootstrap/scss/_mixins';
+
+@import '../../node_modules/bootstrap/scss/_root';
+@import '../../node_modules/bootstrap/scss/_reboot';
+@import '../../node_modules/bootstrap/scss/_type';
+@import '../../node_modules/bootstrap/scss/_images';
+@import '../../node_modules/bootstrap/scss/_code';
+
+@import '../../node_modules/bootstrap/scss/_grid';
+
+/*@import '../../node_modules/bootstrap/scss/_tables';
+@import '../../node_modules/bootstrap/scss/_forms';
+@import '../../node_modules/bootstrap/scss/_buttons';
+@import '../../node_modules/bootstrap/scss/_transitions';
+@import '../../node_modules/bootstrap/scss/_dropdown';
+@import '../../node_modules/bootstrap/scss/_button-group';
+@import '../../node_modules/bootstrap/scss/_input-group';
+@import '../../node_modules/bootstrap/scss/_custom-forms';
+@import '../../node_modules/bootstrap/scss/_nav';
+@import '../../node_modules/bootstrap/scss/_navbar';
+@import '../../node_modules/bootstrap/scss/_card';
+@import '../../node_modules/bootstrap/scss/_breadcrumb';
+@import '../../node_modules/bootstrap/scss/_pagination';
+@import '../../node_modules/bootstrap/scss/_badge';
+@import '../../node_modules/bootstrap/scss/_jumbotron';
+@import '../../node_modules/bootstrap/scss/_alert';
+@import '../../node_modules/bootstrap/scss/_progress';
+@import '../../node_modules/bootstrap/scss/_media';
+@import '../../node_modules/bootstrap/scss/_list-group';
+@import '../../node_modules/bootstrap/scss/_close';
+@import '../../node_modules/bootstrap/scss/_modal';
+@import '../../node_modules/bootstrap/scss/_tooltip';
+@import '../../node_modules/bootstrap/scss/_popover';
+@import '../../node_modules/bootstrap/scss/_carousel';*/
+
+@import '../../node_modules/bootstrap/scss/_utilities';
+/*@import '../../node_modules/bootstrap/scss/_print';*/
+
+/*@import '../../vendor/font-awesome/scss/font-awesome';*/
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/proxima_ssv/proximanova-regular-webfont.woff2') format("woff2"), url('../fonts/proxima_ssv/proximanova-regular-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/proxima_ssv/proxima_nova_bold-webfont.woff2') format("woff2"), url('../fonts/proxima_ssv/proxima_nova_bold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url('../fonts/proxima_ssv/proxima_nova_black-webfont.woff2') format("woff2"), url('../fonts/proxima_ssv/proxima_nova_black-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../fonts/futura/futura_medium_bt-webfont.woff2') format("woff2"), url('../fonts/futura/futura_medium_bt-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { top: 0; }
+    40% { top: -0.8em; }
+    60% { top: -0.4em; }
+}
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { top: 0; }
+    40% { top: -0.8em; }
+    60% { top: -0.4em; }
+}
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { top: 0; }
+    40% { top: -0.8em; }
+    60% { top: -0.4em; }
+}
+@-ms-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { top: 0; }
+    40% { top: -0.8em; }
+    60% { top: -0.4em; }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { top: 0; }
+    40% { top: -0.8em; }
+    60% { top: -0.4em; }
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom, #A3D5F4, #BEE3FB 24%, #D3EAF6 47%, #D2E3EA 61%, #F9F9F9 73%, #F5F3F1 100%)
+}
+
+.navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F05F40;    
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    z-index: 1030;
+    pointer-events:none;
+    cursor:default;
+    width:150px;
+}
+
+.logo {
+    display: inline-block;
+    img {
+        
+    }    
+    span {
+        font-family: 'Proxima Nova Bold';
+        letter-spacing: 3px;
+        font-size: 12.8px;
+        margin-left: 4px;
+        vertical-align: top;
+        line-height: 1.7;
+    }
+    
+    &.logo-red {
+        img {
+            width: 20px;
+        }
+        span {
+            color: #F9464B;
+        }
+    }
+    
+    &.logo-black {
+        width: 180px;
+
+        img {
+            width: 30px;
+            filter: brightness(0%);
+        }
+        span {
+            color: black;
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-left: 6px;
+        }
+    }
+}
+
+
+.no-webp header.masthead {
+    background-image: url("#{$keycdn_img_url}header-m-test-1.jpg");
+}
+.webp header.masthead {
+    background-image: url("#{$keycdn_img_url}header-m-test-1.webp");
+}
+
+header.masthead {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;    
+    min-height: 100vh;
+    padding-top: 5.3rem;
+    padding-bottom: 1rem;
+
+    .wrapper {
+        text-align: center;
+        width: auto !important;
+    }
+
+    h1 {
+        display: inline-block;
+        font-family: 'Proxima Nova Regular';
+        font-size: 2rem;
+        font-weight: 500;
+        color: black;
+        text-align: center;
+        
+        span {
+            color: #F9464B;
+            font-style: italic;
+            font-family: 'Proxima Nova Black'; 
+        }
+
+    }
+
+    .bounce {
+        display: inline-block;
+        position: relative;
+        -moz-animation: bounce 2s infinite linear;
+        -o-animation: bounce 2s infinite linear;
+        -webkit-animation: bounce 2s infinite linear;
+        animation: bounce 2s infinite linear;
+        color: 000;
+    }
+
+    .chevron-down {
+        color: #F9464B;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        fill: #F9464B;
+    }
+    form {
+        input {
+            display: none;
+            &:checked +label.btn-gender {
+            }
+        }
+        label.btn-gender {
+            display: block;
+            color: white;
+            border-radius: 45px;
+            text-decoration: none;        
+            font-size: 1rem;
+            font-family: 'Proxima Nova Bold';
+            margin: 1rem auto;
+            padding: .5rem;
+            max-width: 15rem;
+            text-align: center;
+            transition: all .3s ease;
+            cursor: pointer;
+
+            &.male {
+                background-color: #447AD4;
+
+                &:hover {
+                    background-image: linear-gradient(to bottom, #5577ca, #1C3F97);
+                    border-color: transparent;
+                    box-shadow: 0 0 0px 7px rgba(28, 63, 151, 0.22);                
+                }
+            }
+            &.female {
+                background-color: #F64850;
+
+                &:hover {
+                    background-image: linear-gradient(to bottom, #ff7077, #F64850);
+                    border-color: transparent;
+                    box-shadow: 0 0 0px 7px rgba(246, 72, 80, 0.22);
+                }
+            }
+        }
+    }
+
+
+    p.note {
+        display: inline-block;
+        font-size: 1rem;
+        text-align: center;
+        font-family: 'Proxima Nova Regular';
+        font-style: italic;
+        margin: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: solid 1px lightgray;
+    background-color: white;
+
+    a {
+        color: #0E1113;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 576px) {    
+    header.masthead {
+        padding-top: 8.3rem;
+        h1 {        
+            font-size: 2.2rem;
+            min-width: 33.25rem;
+        }
+        p.note {
+            min-width: 33.25rem;
+            margin: 4rem 0;
+        }
+        form label.btn-gender {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            max-width: 18.75rem;
+        }
+        .fa.fa-chevron-down {            
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {    
+    header.masthead {        
+        background-position: right;
+    }
+    .no-webp header.masthead {
+        background-image: url("#{$keycdn_img_url}header-test-1.jpg");
+    }
+    .webp header.masthead {
+        background-image: url("#{$keycdn_img_url}header-test-1.webp");
+    }
+}
+
+@media (min-width: 1650px) {
+    .container {
+        /*max-width: 1600px;*/
+        max-width: 1453px;
+    }    
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        max-width: 560px;
+    }
+}

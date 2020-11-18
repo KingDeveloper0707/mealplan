@@ -1,0 +1,332 @@
+<html>
+    <head>
+        <title>Simple Keto System</title>        
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
+        <style type="text/css">            
+            body {
+                margin: 0;
+            }
+            #bodyTable {
+                font-family: arial;                
+                font-size: 16px;
+                padding: 16px;
+                color: black;
+            }
+            h1 {
+                font-size: 22px;
+                margin-top: 40px;
+                color: #1F4092;
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 0;                
+            }
+            h2 {
+                font-size: 22px;
+                text-align: center;
+            }            
+            a {
+                color: #555;
+            }
+            .color-red {
+                color:#F9464B !important; 
+            }
+            .color-blue {
+                color: #1f4092;
+            }
+            .text-bold {
+                font-weight: 700;
+            }
+            .d-block.d-sm-inline-block {
+                display: inline-block;
+            }
+            .order-number {
+                margin: 16px 0;
+                font-size: 12px;
+                font-weight: 600;
+            }
+            .access-mp-label {
+                font-size: 22px; 
+                font-weight:700;
+                margin-bottom: 16px;
+            }
+            .btn-access-mp {
+                font-size: 16px; 
+                text-decoration: none;
+                display: block;
+                color: #fff !important;
+                background-color: #F9464B;
+                padding: 20px 25px;
+                border: #F9464B;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase; 
+                text-align: center;                
+            }
+
+            .table-description h2 {
+                color: #1f4092;
+                margin: 24px 0;
+            }
+            .table-description p {
+                font-weight: bold;
+                color: #222222;
+                font-size: 16px;
+                margin-bottom: 32px;
+            }
+            .btn-view-order {
+                font-size: 16px;
+                text-decoration: none;
+                display: block;
+                color: #fff !important;
+                background-color: #1f4092;
+                padding: 20px 25px;
+                border: #31c552;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: center;
+                max-width: 300px;
+                display: inline-block;
+            }            
+
+            @media (max-width: 575.98px) {
+                .d-block.d-sm-inline-block {
+                    display: block;
+                }
+                .hide-in-mobile {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable">
+            <tr>
+                <td align="center">                    
+                    <table border="0" cellpadding="0" cellspacing="0" style="max-width: 600px;">
+                        <tr>
+                            <td>                                
+                                <img src="https://dq40mn20rnss1.cloudfront.net/email/MealPlanConf2.jpg" alt="background-image" width="100%" />
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" style="max-width: 600px;">
+                        <tr>
+                            <td width="100%" align="center">
+                                <p class="order-number">Order: {{ order.reference }}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" align="center">
+                                <div style="">
+                                    <p class="color-red access-mp-label">
+                                        Click The Button Below To Access Your Meal Plan Now.
+                                        <span style="font-size: 16px; color: black;">
+                                            <br class="hide-in-mobile" /> Congratulations, your personalized meal plan is here. 
+                                            <br class="hide-in-mobile" /> No need to wait for the mail, it's delivered instantly!
+                                        </span>
+                                    </p>
+                                    <a href="https://simpleketosystem.com/mealplan?uid={{ order.id }}" target="_blank" class="btn-access-mp">ACCESS YOUR MEAL PLAN</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" align="center">
+                                <h1>Order Summary</h1>
+                            </td>
+                        </tr>
+
+                        {{#each order.items}}
+                        <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                            <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;border-bottom:{{>border-style}};" valign="top">
+                                <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                    <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                                            <h3 style="margin: 0px; font-size: 14px;">
+                                                {{display}} 
+                                                {{#if childItems}}
+                                                <span class="label" style="display: inline; padding: 3px 7px; font-size: 9px; color: #fff; text-align: center; white-space: nowrap; vertical-align: top; border-radius: 3px; background-color: green;">
+                                                    {{translate "Bundle"}}
+                                                </span>
+                                                {{/if}}
+                                            </h3> 
+                                            {{#if subscription}}
+                                            <div class="price" style="margin:10px 0px;">
+                                                <span style="border: {{>border-style}}; background:{{>table-header-color}}; padding:5px; line-height: 32px;">
+                                                    {{#if subscription.adhoc}}
+                                                    {{translate "Subscription will be renewed by vendor"}}
+                                                    {{else}}
+                                                    {{#if subscription.autoRenew}}
+                                                    {{translate "Subscription renews every"}} {{subscription.intervalLength}} {{translate subscription.intervalUnit}}.
+                                                    {{translate "Next charge"}}: {{subscription.nextChargeDateDisplay}} ({{subscription.nextChargeTotalDisplay}}).                                          
+                                                    {{else}}
+                                                    {{translate "Must be renewed every"}} {{subscription.intervalLength}} {{translate subscription.intervalUnit}}.
+                                                    {{subscription.nextChargeTotalDisplay}} {{translate "must be paid manually before"}} {{subscription.nextChargeDateDisplay}}.
+                                                    {{/if}}
+                                                    {{/if}}
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Full Terms and Subscription Management"}}</a>
+                                            </div>
+                                            {{/if}}
+                                            <div style="margin:10px 0px;">
+                                                {{#each fulfillments}} 
+                                                {{#each this}} 
+                                                {{#if file}}
+                                                <a href="{{file}}" target="_blank" style="color:#FFFFFF; text-decoration:none; margin:10px 0px; display:block;">
+                                                    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#353535; border:1px solid #353535; border-radius:5px;">
+                                                        <tr>
+                                                            <td align="center" valign="middle" style="color:#FFFFFF; font-family:{{>font}}; font-size:12px; font-weight:bold; padding:5px 10px;">
+                                                                <span style="color:#FFFFFF;">{{translate "Download"}} {{display}}</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
+                                                {{/if}} 
+                                                {{/each}} 
+                                                {{/each}}
+                                            </div>
+                                            <div style="margin:20px 0px;">
+                                                {{#each fulfillments}} 
+                                                {{#each this}} 
+                                                {{#if license}}
+                                                <div style="background-color: #f9f2f4; padding: 5px; border-radius: 5px; color: #c7254e; border: 1px solid #c7254e; margin:10px 0px; white-space: pre-line;">
+                                                    {{display}}: {{license}}
+                                                </div> 
+                                                {{/if}} 
+                                                {{/each}} 
+                                                {{/each}}
+                                            </div>
+                                            {{#if fulfillments.instructions}}
+                                            <div style="margin:20px 0px;">
+                                                {{{fulfillments.instructions}}}
+                                            </div>
+                                            {{/if}}
+                                        </td>
+                                        <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px; text-align:right;" valign="top" align="right">
+                                            <div>
+                                                {{#if unitDiscountValue}}
+                                                <del style="font-size: 11px;">
+                                                    {{priceTotalDisplay}}
+                                                </del>
+                                                {{/if}}
+                                            </div>
+                                            <div>
+                                                <strong class="price" style="font-size: 16px;color: black;"> {{subtotalDisplay}}</strong>
+                                                <span class="label" style="display: inline; padding: 3px 7px; font-size: 9px; color: #fff; text-align: center; white-space: nowrap; vertical-align: top; border-radius: 3px; background-color: #777;">
+                                                    x {{quantity}}
+                                                </span>
+                                            </div>
+                                            {{#if unitDiscountValue}}
+                                            <div class="saved" style="font-size: 11px;color: #3c763d;">
+                                                You saved {{discountTotalDisplay}} ({{discountPercent}})
+                                            </div>
+                                            {{/if}}
+                                        </td>
+                                    </tr>
+                                    {{#if childItems}}
+                                    <tr>
+                                        <td colspan="2">
+                                            <div style="border: {{>border-style}}; padding:10px;">
+                                                {{#each childItems}}
+                                                <h3 style="margin: 0px; font-size: 14px;">{{display}}</h3>
+                                                <div style="margin: 10px 0px;">
+                                                    {{#each fulfillments}} 
+                                                    {{#each this}} 
+                                                    {{#if file}}
+                                                    <a href="{{file}}" target="_blank" style="color:#FFFFFF; text-decoration:none; margin:10px 0px; display:block;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" style="background-color:#353535; border:1px solid #353535; border-radius:5px;">
+                                                            <tr>
+                                                                <td align="center" valign="middle" style="color:#FFFFFF; font-family:{{>font}}; font-size:12px; font-weight:bold; padding:5px 10px;">
+                                                                    <span style="color:#FFFFFF;">{{translate "Download"}} {{display}}</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </a>
+                                                    {{/if}}
+                                                    {{/each}}
+                                                    {{/each}}
+                                                </div>
+                                                <div style="margin:20px 0px;">
+                                                    {{#each fulfillments}} 
+                                                    {{#each this}} 
+                                                    {{#if license}}
+                                                    <div style="background-color: #f9f2f4; padding: 5px; border-radius: 5px; color: #c7254e; border: 1px solid #c7254e; margin:10px 0px;">
+                                                        {{display}}: {{license}}
+                                                    </div>
+                                                    {{/if}}
+                                                    {{/each}}
+                                                    {{/each}}
+                                                </div>
+                                                {{#if fulfillments.instructions}}
+                                                <div style="margin:20px 0px;">
+                                                    {{{fulfillments.instructions}}}
+                                                </div>
+                                                {{/if}}
+                                                {{/each}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {{/if}}
+                                </table>
+                            </td>
+                        </tr>
+                        {{/each}}
+
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" style="max-width: 600px;" class="table-description">
+                        <tr>
+                            <td width="100%">
+                                <h2>
+                                    Remember To Download Your Bonus Gifts!
+                                </h2>
+                                <p>
+                                    Your Konscious order comes with 3 bonus gifts:  Keto Beginners Guide Ebook, Eat Keto On The Go Ebook, Cravings Eliminator Ebook. Just <a href="https://konsciousketo.com/pages/welcome-to-the-konscious-family" style="color:#F9464B;" target="_blank"><b><u>* CLICK HERE *</u></b></a> to download them now. Enjoy!
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%">
+                                <h2>
+                                    Will I Get Anything in the Mail?
+                                </h2>
+                                <p>
+                                    Accessing your meal plan online has many benefits: it allows us to add enhancements, more recipes, and for you to make comments so we can reply and give advice.
+                                </p>
+                                <p>
+                                    You can also add ratings to your recipes, so you never lose track of your favorite meals.
+                                </p>
+                                <p>
+                                    Please note, the custom meal plan is not a food-delivery service. You will not receive a physical recipe book.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="100%">
+                                <p>If you have any questions, please email us at <a style="color:#1F4092; font-size:16px;" href="mailto:hello@konsciousketo.com">hello@konsciousketo.com</a> or reply directly to this email and a member of our team will be happy to help.</p>
+                                <p>
+                                    We wish you all the best on your keto journey!
+                                </p>
+                                <p>
+                                    The Konscious Keto Team
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" align="center">
+                                <a href="{{ account.url }}" class="btn-view-order d-block d-sm-inline-block">View your order</a>
+                                <span style="margin: 16px 32px;" class=" d-block d-sm-inline-block">or</span>
+                                <a href="https://konsciousketo.com" class="btn-visit-store color-blue d-block d-sm-inline-block">Visit our store</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

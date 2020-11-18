@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAY,CACR,gBAAgB,CAAE,kBAA4B,CAGlD,QAAS,CACL,UAAU,CAAE,wBAAwB,CACpC,OAAO,CAAE,CAAC,CAEV,yBAAiB,CACb,gBAAgB,CCND,OAAO,CDOtB,mCAAU,CACN,KAAK,CAAE,KAAK,CAIpB,+FAA+E,CAC3E,UAAU,CAAE,QAAQ,CACpB,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,MAAM,CACb,OAAO,CAAE,aAAa,CACtB,MAAM,CAAE,eAAe,CACvB,MAAM,CAAE,MAAM,CAGlB,yBAA0B,CACtB,8BAAsB,CAClB,SAAS,CAAE,OAAO,CAClB,YAAY,CAAE,OAAO",
+"sources": ["../../scss/mealplan_update/sidebar.scss","../../scss/mealplan_update/variable.scss"],
+"names": [],
+"file": "sidebar.css"
+}

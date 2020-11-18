@@ -1,0 +1,63 @@
+{{>header}}
+      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: {{>table-header-color}}; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="{{>table-header-color}}">
+          <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+              <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                      <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                          <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                              <h2 style="font-family: {{>font}}; box-sizing: border-box; margin: 0;font-size: 16px;">
+                                  {{translate "Hello"}} {{account.contact.first}} {{account.contact.last}},
+                              </h2>
+                              <h4 style="margin: 5px 0;">
+                                  {{translate "your payment for subscription to"}} "{{subscription.display}}" ({{order.totalDisplay}}) {{translate "was successful"}}.
+                              </h4>
+                              <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Manage Your Orders"}}</a>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: #fff; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="#fff">
+          <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+              <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 10px 0px 10px 20px; border-bottom:{{>border-style}};" bgcolor="{{>table-header-color}}">
+                  <strong>{{translate "Your Subscription"}}</strong>
+              </td>
+          </tr>                        
+              <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                  <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;border-bottom:{{>border-style}};" valign="top">
+                      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                          <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                              <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                                  <h3 style="margin: 0px; font-size: 14px;">
+                                      {{subscription.display}}
+                                      <span class="label" style="display: inline; padding: 3px 7px; font-size: 9px; color: #fff; text-align: center; white-space: nowrap; vertical-align: top; border-radius: 3px; background-color: #777;">
+                                          x {{subscription.quantity}}
+                                      </span>                                    
+                                  </h3> 
+                                   <div class="price" style="margin:10px 0px;">
+                                      <span style="border: {{>border-style}}; background:{{>table-header-color}}; padding:5px;">
+                                          {{#if subscription.adhoc}}
+                                              {{translate "Subscription will be renewed by vendor"}}
+                                          {{else}}
+                                              {{#if subscription.autoRenew}}
+                                                  {{translate "Subscription renews every"}} {{subscription.intervalLength}} {{translate subscription.intervalUnit}}.
+                                                  {{translate "Next charge"}}: {{subscription.nextChargeDateDisplay}} ({{subscription.nextChargeTotalDisplay}}).                                          
+                                              {{else}}
+                                                  {{translate "Must be renewed every"}} {{subscription.intervalLength}} {{translate subscription.intervalUnit}}.
+                                                  {{subscription.nextChargeTotalDisplay}} {{translate "must be paid manually before"}} {{subscription.nextChargeDateDisplay}}.
+                                              {{/if}}
+                                          {{/if}}
+                                      </span>
+                                  </div>
+                                  <div>
+                                      <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Full Terms and Subscription Management"}}</a>
+                                  </div>
+                              </td>
+                          </tr>
+                      </table>
+                  </td>
+              </tr>
+              {{>invoice}}
+      </table>
+{{>footer}}

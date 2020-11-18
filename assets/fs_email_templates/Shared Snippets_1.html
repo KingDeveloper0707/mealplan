@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <style type="text/css">
+            @media only screen and (max-width: 480px)
+            {
+                *[class="hide-in-mobile"] {
+                    max-height:0; /* Gmail*/
+                    display:none; /* Generic*/
+                    mso-hide:all; /* Outlook clients*/
+                    overflow:hidden; /* Generic */
+                    font-size:0; /* Be careful with this one, only use if absolutely required */
+                } 
+            }
+            html {
+                font-family: Arial,Helvetica,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;
+            }
+            body {
+                font-family: Arial,Helvetica,sans-serif; box-sizing: border-box; font-size: 12px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; margin: 0;-webkit-font-smoothing: antialiased;  -webkit-text-size-adjust: none;  width: 100% !important;  height: 100%;  line-height: 1.6em; color: #777777; font-size: 12px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; width: 100%; margin: 0;">
+            <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0;" valign="top">
+                </td>
+                <td width="600" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;" valign="top">
+                    <div style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: {{>header-background-color}}; margin: 0 0 20px 0; border: {{>border-style}}; width: 100%;" bgcolor="#fff">
+                            <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0; padding: 20px;" valign="top">
+                                    <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                        <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                            <td style="font-family: {{>font}}; box-sizing: border-box; margin: 0; padding: 0">
+                                                <img src="{{>logo}}" />
+                                            </td>
+                                            <td align="right" class="hide-in-mobile">
+                                                <a href="mailto:{{store.support.email}}" class="btn" style="-webkit-border-radius: 5; -moz-border-radius: 5; border-radius: 5px; color: 0000EE; font-size: 14px; background: {{>header-background-color}}; padding: 10px 20px 10px 20px; border: solid #ffffff 1px;">Contact Us</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>

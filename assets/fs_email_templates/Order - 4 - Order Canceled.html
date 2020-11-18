@@ -1,0 +1,30 @@
+{{>header}}
+      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: {{>table-header-color}}; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="{{>table-header-color}}">
+          <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+              <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                      <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                          <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                              <h2 style="font-family: {{>font}}; box-sizing: border-box; margin: 0;font-size: 16px;">
+                                  {{translate "Hello"}} {{account.contact.first}} {{account.contact.last}},
+                              </h2>
+                              <h4 style="margin: 5px 0;">
+                                  {{translate "your order"}} {{{order.reference}}} {{translate "was canceled"}}. 
+                              </h4>
+                              {{#if reasonNote}}
+                              <h4 style="margin: 5px 0;">
+                                  {{reasonNote}} 
+                              </h4>
+                              {{/if}}
+                              <h4 style="margin: 5px 0;">
+                                 {{translate "For more information contact"}} <a href="mailto:{{store.support.email}}">{{store.support.name}}</a>
+                              </h4>
+                              <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Manage Your Orders"}}</a>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+{{>footer}}
+

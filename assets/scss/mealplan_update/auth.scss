@@ -1,0 +1,30 @@
+@import 'variable';
+@import 'form';
+
+header.masthead {
+    padding-top: 5rem;
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 650px;
+    }
+}
+
+footer {
+    background-color: #F0F2F5;
+    color: #65676B;
+    text-align: center;
+    a {
+        color: #65676B;
+    }
+}
+
+form.user .form-control-user {
+    border-radius: 4px;
+}
+
+form.user .btn-user {
+    border-radius: 4px;    
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAY,CACR,KAAK,CCCU,OAAW,CDA1B,WAAW,CAAE,uBAAuB,CAEpC,2BAAgB,CAEZ,SAAS,CAAC,KAAK,CACf,MAAM,CAAC,mBAAmB,CAC1B,QAAQ,CAAC,IAAI,CAGT,wDAAiB,CACb,gBAAgB,CAAE,OAAO,CACzB,+DAAS,CACL,KAAK,CAAE,KAAK,CACZ,sEAAS,CACL,KAAK,CAAE,KAAK,CAGpB,+DAAS,CACL,gBAAgB,CCjBb,OAAO,CDuB1B,0BAAe,CACX,IAAI,CAAE,KAAK",
+"sources": ["../../scss/mealplan_update/page_inbox.scss","../../scss/mealplan_update/variable.scss"],
+"names": [],
+"file": "page_inbox.css"
+}

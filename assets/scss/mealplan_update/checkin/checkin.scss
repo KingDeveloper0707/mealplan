@@ -1,0 +1,146 @@
+@import '../../bootstrap';
+@import '../../variable';
+@import '../../fonts';
+@import 'base';
+@import '../form';
+@import '../basetimer';
+
+//hide input arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+header.masthead {
+    background-color: #F0F0F5;
+}
+/*headings*/
+
+/*form styles*/
+.quiz-area {
+    #msform {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        min-height: 620px;
+
+        fieldset {
+            width: 100%;
+            &:not(:first-child) {
+                display: none;
+            }
+
+            .btn-nav {
+                color: $color-btn;
+                text-decoration: none;
+            }
+
+            .fs-title {
+                font-size: 1.125rem;
+                color: #272729;
+                margin-bottom: 2rem;
+                font-family: 'Inter Semibold';
+            }
+
+            .q-num {
+                display: block;
+                font-size: .875rem;
+                font-family: 'Inter Semibold';
+                color: #727277;
+                margin-top: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .desc-heading {
+                font-family: 'Inter Semibold';
+                font-size: .875rem;            
+            }
+            .desc-text {
+                font-family: 'Inter Regular';
+                font-size: .875rem;
+            }
+
+            &.single-option {
+                .form-group {
+                    label {
+                        position: relative;
+                        border: 2px solid #8D8D94;
+                        padding: .5rem;
+                        width: 100%;
+                        border-radius: 4px;
+                        margin-bottom: 0;
+                        cursor: pointer;                    
+                        -webkit-transition: all .15s ease;
+                        transition: all 0.15s ease;
+                        font-family: 'Inter Semibold';
+                        /*font-size: 1.125rem;*/
+
+                        &:hover {
+                            border-color: $color-btn;
+                        }
+
+                        small {
+                            font-family: 'Inter Regular';
+                            font-size: 90%;
+                        }
+                    }
+                    input[type=radio]:checked + label {
+                        &:before {
+                            position: absolute;
+                            left: 1rem;
+                            top: 0;
+                            bottom: 0;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            height: 1.5rem;
+                            color: $color-check;
+                            content: "\f058";
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            font-size: 1.5rem;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+.processing-area {
+    margin-top: 5rem;
+    
+    .base-timer {
+        width: 200px;
+        height: 200px;
+        .base-timer__label {            
+            width: 200px;
+            height: 200px;
+            
+            .label-text {
+                font-size: 3em;
+                small {
+                    font-size: 35%;
+                }
+            }
+        }
+    }
+    .processing-texts {
+        font-family: 'Inter Semibold';
+        .fa.fa-check {
+            color: $color-check;
+        }
+    }
+}
+
+.thankyou-area {
+    margin-top: 5rem;
+}
+
+
+

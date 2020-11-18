@@ -1,0 +1,56 @@
+#surveyModal {
+    &.mood {
+        .thankyou-wrapper {display: none;}
+        .note-wrapper {display: none;}
+    }
+    &.note {
+        .mood-wrapper {display: none;}
+        .thankyou-wrapper {display: none;}
+    }
+    &.thankyou {
+        .mood-wrapper {display: none;}
+        .note-wrapper {display: none;}
+    }
+    .modal-content {
+        min-height: 30rem;        
+        .form-check {
+            .form-check-label {
+                cursor: pointer;
+                border-radius: 4px;
+                min-width: 5.4rem;
+                padding-top: .7rem;
+                padding-bottom: .5rem;
+                border: 2px solid transparent;
+
+                &[for=radio-great] {
+                    color: #3AB86E;
+                }
+                &[for=radio-good] {
+                    color: #9AB91D;
+                }
+                &[for=radio-ok] {
+                    color: #EAAB3F;
+                }
+                &[for=radio-poor] {
+                    color: #F9464B;
+                }
+
+                &:hover {
+                    box-shadow: 0px 4px 10px 0px #dbdbdb;
+                }            
+            }
+
+            .form-check-input:checked + .form-check-label {
+                border: 2px solid #8D8D94;
+            }
+        }
+        form#form-survey {
+            width: 100%;
+            textarea {
+                max-width: 22rem;
+                min-height: 7rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import 'variable';
+
+#inbox-page {
+    color: $color-text;
+    font-family: 'Proxima Nova Semibold';
+
+    .emails-wrapper {        
+        /*max-width:480px;*/
+        min-width:480px;
+        height:calc(100vh - 140px); 
+        overflow:auto;
+
+        .list-group {
+            .list-group-item {
+                background-color: #F9F9F8;
+                &.unread {
+                    color: black;
+                    &.active {
+                        color: white;
+                    }
+                }
+                &.active {
+                    background-color: $color-sidebar-active;
+                }                
+            }
+        }
+    }
+
+    .email-wrapper {
+        flex: 1 1 0;
+    }
+}

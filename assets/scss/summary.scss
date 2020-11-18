@@ -1,0 +1,294 @@
+@import 'variable';
+
+.summary-area {
+    display: none;
+    height: 100vh;
+    align-items: center;
+}
+
+#summary-section-area {
+    display: none;
+    text-align: center;
+}
+
+body.summary {
+    .summary-area {
+        display: flex;
+    }
+    #summary-section-area {
+        display: block;
+    }
+}
+
+.summary-area h2 {
+    font-family: 'Proxima Nova Bold';
+    font-size: 2.5rem;
+    /*margin-bottom: 2rem;*/
+    > span {
+        font-family: 'Proxima Nova Bold';
+        font-size: 4.25rem;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .summary-area {
+        height: calc(100vh - 53.75vw);
+        justify-content: center;
+        padding-bottom: 1rem;
+        align-items: unset;
+        h2 {
+            font-size: 6.6vw;
+            > span {
+                font-size: 10vw;
+            }
+        }
+    }
+}
+
+section#summary {
+    padding: 0;
+    h2 {
+        text-align: center;
+        font-family: 'Futura Bold';
+        font-size: 2.25rem;
+        color: #F9464B;
+    }
+    .p-first-name {
+        display: none;
+        font-size: 1.2rem;
+    }
+    .summary-item {
+        background-color: white;
+        margin-bottom: 1.5rem;
+        h3 {
+            font-size: 2rem;
+            font-family: 'Futura Condensed Medium';
+            color: #1F4092;
+            text-align: center;
+        }
+        p.your-status {
+            margin-bottom: .5rem;
+            span.text-value {
+                color: #F9464B;
+                font-family: 'Futura Bold';
+                text-transform: uppercase;
+                font-size: 3rem;
+            }
+        }
+        &.achievable_weight {
+            p.your-status span {
+                &.text-unit {
+                    vertical-align: top;
+                    line-height: 3rem;
+                }
+                &.limit-month {
+                    color: #F9464B;
+                    font-family: 'Proxima Nova Bold';
+                }
+            }
+            svg {
+                width: 100%;
+                height: initial !important;
+            }
+        }
+        img, svg:not(.icon) {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 1rem;
+            height: 168px;
+        }
+        .sum-item-img {
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 168px;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+        svg.icon {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}
+
+.webp section#summary .summary-item.keto_compatibility .sum-item-img {
+    background-image: url("#{$keycdn_img_url}sum-compatibility.webp");
+}
+
+.no-webp section#summary .summary-item.keto_compatibility .sum-item-img {
+    background-image: url("#{$keycdn_img_url}sum-compatibility.png");
+}
+
+section#summary {
+    .summary-item {
+        &.anxiety_factors .sum-item-img {
+            background-image: url("#{$keycdn_img_url}sum-factor.svg");
+            width: 75%;
+        }
+        &.energy_metabolism .sum-item-img {
+            background-image: url("#{$keycdn_img_url}sum-energy.svg");
+            width: 75%;
+        }
+        &.body-change svg {
+            height: 380px;
+            padding-right: 1rem;
+            &#bodychange-male {
+                display: none;
+            }
+        }
+        svg {
+            width: -webkit-fill-available;
+        }
+        .number-value {
+            color: #F9464B;
+            font-size: 3.75rem;
+            font-family: 'Proxima Nova Bold';
+            text-align: center;
+            display: block;
+        }
+        p.description {
+            margin-bottom: 0;
+            position: relative;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            /*padding-bottom: 2rem;*/
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+        .more-text {
+            display: none;
+        }
+        .btn-readmore {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: 'Proxima Nova Bold';
+            margin-left: auto;
+            margin-right: auto;            
+            width: 145px;
+            text-align: center;
+            border: solid 2px #1F4092;
+            border-radius: 17px;
+            color: #1F4092;
+            padding-top: .2rem;
+            padding-bottom: .2rem;
+            margin-top: 1rem;            
+            &:hover {
+                /*text-decoration: underline;*/
+            }
+        }
+    }
+    .btn-continue {
+        margin: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.summary-item {
+    svg#bmi {
+        fill: #C0D2FC;
+        g.bmi-body.selected {
+            fill: #ED2738;
+        }
+    }
+    &.first-week .calendar table {
+        font-size: .8rem;
+        table-layout: fixed;
+        width: 100%;
+        font-size: .7rem;
+        table-layout: fixed;
+        width: 90%;
+        margin: 0 auto;
+    }
+    &.metabolic_age svg {
+        height: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    section#summary .btn-continue {
+        position: initial;
+        margin: 0 auto;
+    }
+}
+
+section#whatyouget {
+    padding: 0;
+    h3 {
+        font-family: 'Proxima Extra Bold';
+        font-size: 2.1rem;
+        margin-top: 2.5rem;
+        span.blue-color {
+            font-size: 1.2em;
+        }
+    }
+    h4 {
+        color: #464646;
+        font-size: 1.45rem;
+        font-family: 'Futura Bold';
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .text-area {
+        .item {
+            position: relative;
+        }
+        span {
+            font-size: 1.125rem;
+        }
+        .title {
+            font-family: 'Proxima Extra Bold';
+            font-size: 1.375rem;
+            color: #F9464B;
+        }
+    }
+    .item-texts {
+        width: 90%;
+        display: inline-block;
+        text-align: left;
+        padding-left: 1.1rem;
+        margin-left: -1rem;
+        border-left: solid 1px black;
+        .item-text-container {
+            margin-top: -.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .text-area .item svg.icon {       
+        fill: #1C3F97;
+        vertical-align: top;        
+        background-color: white;
+        position: relative;
+    }
+}
+
+@media (max-width: 575.98px) {
+    section#whatyouget {
+        /*padding: 4rem 0;*/
+        h3 {
+            font-size: 6vw;
+        }
+    }
+}
+
+.similar-calendar-container {
+    margin-bottom: 2rem;
+    .summary-item {
+        height: 95%;
+    }
+}
+
+.inner-shadow-container {
+    box-shadow: 0 0 7px 0px #C3CEE0;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    padding-top: 2rem;
+}

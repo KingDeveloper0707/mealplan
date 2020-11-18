@@ -1,0 +1,10 @@
+<svg id="Group_2" data-name="Group 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="330" height="330" viewBox="0 0 330 330">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="154" height="154" transform="translate(0.061 0.061)" fill="none"/>
+    </clipPath>
+  </defs>
+  <circle id="Oval1" cx="152" cy="152" r="152" transform="translate(13 13)" fill="none" stroke="#EDD1D1" stroke-miterlimit="10" stroke-width="26"/>
+  <circle id="Oval" cx="152" cy="152" r="152" transform="translate(13 13)" fill="none" stroke="#f9464b" stroke-miterlimit="10" stroke-width="26"/>
+  
+</svg>

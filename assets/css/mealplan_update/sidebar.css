@@ -1,0 +1,2 @@
+.bg-sidebar{background-color:#272729 !important}.sidebar{box-shadow:1px 0px 20px 0px #eeeeee;z-index:0}.sidebar .nav-item.active{background-color:#6B76FF}.sidebar .nav-item.active .nav-link{color:white}.sidebar .nav-item .nav-link .badge-counter,.sidebar .topbar .nav-item .nav-link .badge-counter{margin-top:-0.55rem;border-radius:50%;width:1.8rem;padding:0.5rem 0.4rem;border:solid 1px white;height:1.8rem}@media (min-width: 768px){.sidebar .nav-item .nav-link i{font-size:1.15rem;margin-right:0.85rem}}
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,928 @@
+@import 'variable';
+
+body.pricing {    
+    section#whatyouget h3 span.blue-color {
+        font-size: inherit;
+    }
+    .offer-badge {
+        font-family: 'Proxima Extra Bold';
+        font-size: 20px;
+    }
+    header.masthead {
+        /*background-color: #161F27 !important;*/
+        /*padding-top: 4rem !important;*/
+        background-image: none !important;
+    }
+    .masthead {
+        .timer-area .text-area {
+            display: inline-block;
+            vertical-align: top;
+            font-family: 'CervoNeue-BoldNeue';
+            font-size: 20px;
+            margin-top: 4px;
+        }
+        .countdown {
+            /*display: inline-block;*/
+            vertical-align: top;
+            margin-left: 4px;
+            .timer-min, .timer-sec {
+                display: inline-block;
+                border: solid 1.39px #979797;
+                border-radius: 5px;
+                /*color: white;*/
+                font-family: 'CervoNeue-BlackNeue';
+                font-size: 27.72px;
+                padding: 4px 8px;
+                width: 50px;
+                height: 44px;
+                line-height: 33px;
+            }
+            .timer-tick {
+                font-size: 38px;
+                padding: 0px 0.3rem;
+                line-height: 0px;
+            }
+        }
+        h2 {
+            font-size: 35px;
+            margin-top: 6rem;
+        }
+        .star-area {
+            #stars {
+                width: 140px;
+                color: #F1A949;
+                vertical-align: top;
+                display: inline-block;
+            }
+        }
+
+    }
+    .whatyouget {
+        border: solid 2px #F9464B;
+        border-radius: 8px;
+        padding: 3rem 17% 3.5rem;
+        position: relative;
+        display: inline-block;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        label {
+            position: absolute;
+            top: -23px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-family: 'Proxima Extra Bold';
+            font-size: 20px;
+            background-color: #f9464b;
+            color: white;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            max-width: 180px;
+            width: 180px;
+        }
+        h3 {
+            font-family: 'Proxima Nova Bold';
+            font-size: 1.875rem;
+            color: #f9464b;
+        }
+        .one-time-payment {
+            /*color: #FFA200;*/
+            font-size: 20px;
+            font-family: 'CervoNeue-RegularNeue';
+        }
+        .text-area {
+            display: inline-block;
+            font-family: 'Proxima Nova Bold';
+            font-size: 1.25rem;
+            text-align: left;
+            ul {
+                padding-left: 2rem;
+                list-style: none;
+
+                div {
+                    margin-left: .5rem;
+                    width: calc(100% - 40px);
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+        .save50 {
+            display: inline-block;
+            background-color: #1F4092;
+            font-family: 'Proxima Extra Bold';
+            font-size: 20px;
+            padding: .3rem 1rem;
+            border-radius: .5rem;
+            color: white;
+        }
+        .only {
+            font-family: 'Caveat Regular';
+            font-size: 2.8125rem;
+            color: #1F4092;
+        }
+        .price {
+            font-family: 'Proxima Nova Bold';
+            font-size: 30px;
+            padding: 0 1rem;
+            color: #F9464B;
+        }
+        .old-price {
+            display: inline-block;
+            color: #929292;
+            font-family: 'CervoNeue-RegularNeue';
+            font-size: 1rem;
+            .value {
+                font-family: 'Proxima Nova Bold';
+                font-size: 25px;
+                position: relative;
+                display: inline-block;
+                &:after {
+                    border-bottom: 0.125em solid rgba(31, 64, 146, 0.5);
+                    content: "";
+                    left: -10px;
+                    margin-top: calc(0.125em / 2 * -1);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 64px;
+                }
+            }
+        }
+        .lifetime-access {
+            font-family: 'CervoNeue-RegularNeue';
+            font-size: 1rem;
+        }
+    }
+    .masthead .reviews {
+        font-family: 'CervoNeue-RegularNeue';
+        font-size: 1rem;
+    }
+}
+
+body {
+    &.pricing {
+        .masthead .review-list .review-item {
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            img {
+                border-radius: .5rem;
+                border: solid 1px white;
+            }
+        }
+        section {
+            padding: 0;
+        }
+        .review-name {
+            text-align: center;
+            font-family: 'CervoNeue-RegularNeue';
+            font-size: 1.5rem;
+            color: black;
+        }
+        .review-text {
+            text-align: left;
+            font-family: 'Proxima Nova Regular';
+            font-style: italic;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 1rem;
+            margin-top: .5rem;
+            width: 75%;
+            margin: 0 auto;
+            color: black;
+        }
+        section {
+            &#whatyouget {
+                background-color: #F8F9FA;
+            }
+            &.success-section h2, &.benefit-section h2, &.twovideosection h2 {
+                font-family: 'Proxima Nova Bold';
+                font-size: 2.1875rem;
+                color: #69747E;
+                margin-top: 3rem;
+            }
+            &.success-section h2 .colored, &.benefit-section h2 .colored {
+                color: #FD6E1D;
+                font-size: 2.3125rem;
+                font-family: 'Proxima Extra Bold';
+                font-style: italic;
+            }
+        }
+        .success-text p {
+            font-family: 'Proxima Nova Regular';
+            font-style: italic;
+        }
+        section {
+            &.benefit-section {
+                background-color: #F8F9FA;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    margin-top: 2rem;
+                    color: #F94F54;
+                }
+                ul {
+                    color: #1F4092;
+                    font-size: 1.25rem;
+                    font-family: 'Proxima Nova Regular';
+                    display: inline-block;
+                    text-align: left;
+                    list-style: none;
+                    li {
+                        padding: 1px 0px 0px 27px;
+                        margin-bottom: 4px;
+
+                        div {
+                            display: inline-block;
+                            width: calc(100% - 40px);
+                            margin-left: .5rem;
+                        }
+
+                        svg {
+                            vertical-align: top;
+                            margin-top: 6px;
+                        }
+                    }
+                }
+            }
+            &.faq {
+                h2 {
+                    font-size: 2.25rem;
+                    color: #69747E;
+                    font-family: 'Proxima Extra Bold';
+                    color: #f9464b;
+                    margin-top: 3rem;
+                }
+                .faq-content {
+                    display: inline-block;
+                    max-width: 920px;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+        .accordion {
+            background-color: #F6F7F9;
+            color: #444;
+            cursor: pointer;
+            padding: 18px 10%;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.25rem;
+            transition: 0.4s;
+            font-family: 'Proxima Nova Bold';
+            color: black;
+            &.active, &:hover {
+                background-color: transparent;
+            }
+            &:after {
+                content: '\002B';
+                color: black;
+                font-family: 'Proxima Nova Black';
+                font-size: 1.875rem;
+                float: right;
+                margin-left: 5px;
+                margin-top: -.6rem;
+            }
+        }
+    }
+    &.mealplan .accordion:after {
+        content: '\002B';
+        color: black;
+        font-family: 'Proxima Nova Black';
+        font-size: 1.875rem;
+        float: right;
+        margin-left: 5px;
+        margin-top: -.6rem;
+    }
+    &.pricing {
+        .accordion.active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            p {
+                font-size: 1.25rem;
+                padding: 1rem 10%;
+                text-align: left;
+                color: black;
+            }
+        }
+        section {
+            &#user-review {
+                color: white;
+                box-shadow: 0 0 7px 0px #C3CEE0;
+                margin: 2rem 10%;
+                h2 {
+                    text-align: center;
+                    font-size: 2.25rem;
+                    font-family: 'Proxima Nova Bold';
+                    margin-bottom: 2rem;
+                    margin-top: 3rem;
+                    color: #F9464B;
+                    .colored {
+                        color: #FD6E1D;
+                        font-size: 2.3125rem;
+                        font-family: 'Proxima Extra Bold';
+                        font-style: italic;
+                    }
+                }
+            }
+            &#whatyouget-section {
+                /*background-color: #29353F;*/
+                color: #1F4092;
+                .whatyouget {
+                    /*    padding-left: 10%;
+                        padding-right: 10%;*/
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 4rem;
+                }
+            }
+        }
+        .pay-1 {
+            font-size: 20px;
+            font-family: 'CervoNeue-RegularNeue';
+            color: #171717;
+            ul {
+                list-style: none;
+
+                div {
+                    display: inline-block;
+                    margin-left: .5rem;
+                    vertical-align: top;
+                }
+            }
+        }
+        section#payment {
+            padding: 1rem 0;
+            .pay-2 {
+                font-size: 1rem;
+                font-family: 'Proxima Nova Regular';
+                color: #1F2224;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    body.pricing .review-text {
+        font-size: 15px;
+    }
+    body.pricing section#whatyouget h3{
+        font-size: 7.5vw;
+    }
+    body.pricing section.success-section h2, body.pricing section.benefit-section h2, body.pricing section.twovideosection h2 {
+        font-size: 7.5vw;
+    }
+    body.pricing section.faq h2 {
+        font-size: 7.5vw;
+    }
+    body.pricing section#user-review h2 {
+        font-size: 7.5vw;
+    }
+    body.pricing .success-section .review-list {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body.pricing {
+        .masthead {
+            h2 {
+                font-size: 7.5vw;
+                margin-top: 7.5rem;
+            }
+            .timer-area .text-area {
+                font-size: 3.8vw;
+            }
+            .countdown {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            .star-area p {
+                margin-bottom: 0;
+            }
+        }
+        .whatyouget {
+            padding-left: .5rem;
+            padding-right: .5rem;
+            width: calc(100% - 30px);
+            .text-area {
+                font-size: 4.6vw;
+            }
+        }
+    }
+    /*    body.pricing .review-item .review-text {
+           
+        }*/
+    html.pricing {
+        font-size: 13px;
+    }
+    body.pricing {
+        font-size: 16px;
+        .accordion {
+            font-size: 16px;
+            padding: 18px 6%;
+        }
+        section.benefit-section ul {
+            font-size: 18px;
+        }
+        .panel p {
+            font-size: 16px;
+        }
+        section {
+            &#whatyouget-section .whatyouget {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &#payment .pay-2 {
+                font-size: 2.8vw;
+            }
+            &#user-review {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 345px) {
+    body.pricing .accordion {
+        padding: 18px 10%;
+    }
+}
+
+body.pricing .whatyouget {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+body.pricing .whatyouget label {
+    background-color: #1F4092;
+}
+body.pricing .inner-area {
+    position: relative;
+    box-shadow: 0 4px 7px 0px #165C6D;
+    border-radius: 8px;
+    background-color: #F7FCFF;
+    margin-top: 3rem;
+    padding: 2rem 4% .5rem;
+    display: inline-block;
+    font-family: 'Proxima Nova Bold';
+    width: 96%;
+    margin-bottom: 2rem;
+}
+body.pricing .inner-area hr {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    border-color: #E1E1E1;
+}
+body.pricing .inner-area .gray-color {
+    color: #7F7F7F;
+}
+body.pricing .inner-area .save50 {
+    background-color: #f9464b;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;  
+    top: -20px;
+    width: 150px;
+    display: inline-block;
+    font-family: 'Proxima Extra Bold';
+    font-size: 20px;
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+    color: white;
+}
+body.pricing .inner-area .substr {
+    font-size: 1rem;
+}
+body.pricing .inner-area .lifetime-access {
+    font-size: 1.5rem;
+    font-family: 'CervoNeue-RegularNeue';
+}
+body.pricing .inner-area .lifetime-access.lifetime-access-1 {
+    font-family: "Proxima Nova Bold";
+    font-weight: normal;
+}
+body.pricing .inner-area .lifetime-access.lifetime-access-2 {	
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+body.pricing .inner-area .old-price {
+    font-family: inherit;
+    font-size: 1.15rem;
+    position: relative;
+}
+body.pricing .inner-area .old-price:after {
+    border-bottom: 0.125em solid #7B7D7F;
+    content: "";
+    left: -2px;
+    margin-top: calc(0.125em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 32px;
+}
+body.pricing .whatyouget .text-area {
+    font-family: 'Proxima Extra Bold';
+}
+body.pricing .whatyouget .substr {
+    font-family: 'Proxima Nova Bold';
+}
+@media (max-width: 575.98px) {
+    body.pricing .whatyouget {
+        width: 100%;
+        font-size: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;	
+        border-width: 3px;
+        width: calc(100% - 2rem);
+    }
+    body.pricing .inner-area .lifetime-access {
+        font-size: 1rem;
+    }
+    body.pricing .inner-area .lifetime-access.lifetime-access-2 {
+        font-size: 1.25rem;
+    }
+
+    body.pricing .whatyouget label {
+        font-size: 1rem;
+        width: 170px;
+        top: -16px;
+    }
+    body.pricing .whatyouget h3 {
+        font-size: 1.25rem;
+    }
+    body.pricing .whatyouget .one-time-payment {
+        font-size: 1rem;
+    }
+    body.pricing .whatyouget .text-area {
+        font-size: 1.1875rem;
+    }
+    body.pricing .inner-area .save50 {
+        font-size: 1rem;
+    }
+    body.pricing .inner-area .lifetime-access.lifetime-access-1 {
+        font-size: 1rem;
+    }
+    body.pricing .inner-area .old-price {
+        font-size: 1rem;
+    }
+}
+
+
+.twovideosection .wistia_responsive_padding.i6bbz9get7 {
+    display : none;
+}
+.twovideosection .switch-video {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px !important;
+}
+.twovideosection .switch-video .avatar {  
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+    border-radius: 50%;
+    margin-right: 1rem;
+    box-shadow: 2px 4px 6px 1px #6d6d6d;
+}
+.twovideosection .switch-video.selected .avatar {
+    box-shadow: 2px 4px 6px 1px #ff6b6b;
+}
+.twovideosection .switch-video:not(.selected) {
+    opacity: 0.5;
+}
+.twovideosection .switch-video#kxyg6neziv .avatar {
+    background-image: url("#{$keycdn_img_url}pricing-lisa-min.jpg");
+}
+.twovideosection .switch-video#i6bbz9get7 .avatar {
+    background-image: url("#{$keycdn_img_url}pricing-carol-min.jpg");
+}
+
+.order-bump-inline, .order-bump-modal-inner {
+    color: #313131;
+    background-color: #FCF7E2;
+    box-shadow: 0 0 7px #a0a0a0;
+    margin: 5rem;
+    position: relative;    
+
+    .ob-header {
+        background-color: #FDFE98;
+        font-family: 'Proxima Nova Bold';
+        font-size: 1.125rem;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: .5rem 0;
+    }
+
+    .ob-body {
+        padding: 2rem 15%;
+        .offer-image {
+            max-height: 170px;
+            width: auto;
+        }
+        .offer-area {
+            font-family: 'Proxima Nova Bold';
+            font-size: 1.125rem;
+            margin-left: 1rem;            
+
+            .limited-time-offer {
+                color: #F9464B;
+                margin-bottom: .8rem;
+            }
+            .old-price {
+                color: #F9464B;
+                position: relative;
+                margin-bottom: .8rem;
+                &:before {
+                    border-bottom: 0.125em solid #F9464B;
+                    content: "";
+                    left: 7px;
+                    margin-top: calc(0.125em / 2 * -1);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 75px;
+                    transform: rotate(-15grad);
+                }
+                &:after {
+                    border-bottom: 0.125em solid #F9464B;
+                    content: "";
+                    left: 7px;
+                    margin-top: calc(0.125em / 2 * -1);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 75px;
+                    transform: rotate(15grad);
+                }
+            }
+            .curr-price {
+                color: #42A405;
+                font-size: 1.2em;                
+            }
+        }
+        .text-1 {
+            font-size: 1.4rem;
+        }
+        .ob-list {
+            list-style-position: outside;
+            padding-left: 2rem;
+            list-style-image: url(#{$keycdn_img_url}blue-check.svg);
+            font-family: 'Proxima Nova Bold';
+            display: inline-block;
+            text-align: left;
+            li {
+                margin-bottom: .5rem;
+            }
+        }
+        .text-area {
+            text-align: left;
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+.styled-checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 0;
+
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+    }
+
+    // Box.
+    & + label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border: solid 2px #313131;
+        margin-top: 1px;
+    }
+
+    // Box hover
+    &:hover + label:before {
+        /*background: #f35429;*/
+    }
+
+    // Box focus
+    &:focus + label:before {
+        /*box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);*/
+    }
+
+    // Box checked
+    &:checked + label:before {
+        /*background: #f35429;*/
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+        color: #b8b8b8;
+        cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+        box-shadow: none;
+        background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+        content: '';
+        position: absolute;
+        width: 11.4px;
+        height: 5.3px;
+        background: transparent;
+        top: 8.6px;
+        left: 4.7px;
+        border: 2px solid #313131;
+        border-top: none;
+        border-right: none;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.order-bump-inline {
+    display: none;
+}
+#order-bump-modal .order-bump-modal-inner {
+    margin: 0;
+    border: solid 2px #F9464B;
+}
+#order-bump-modal .modal-body {
+    padding: 0;
+}   
+#order-bump-modal button.close {
+    color: white;
+    opacity: 1;
+    background-color: #F9464B;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 28px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 600;
+}
+#order-bump-modal .btn-yes {
+    box-shadow: none;
+}
+#order-bump-modal .btn-no {
+    background: none;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .order-bump-inline, .order-bump-modal-inner {
+        margin: 2rem auto;
+        width: calc(100% - 2rem);
+        display: inline-block;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .order-bump-inline .ob-body,
+    .order-bump-modal-inner .ob-body {
+        padding: 2rem 5%;
+    }
+    .order-bump-inline .ob-body .offer-area
+    .order-bump-modal-inner .ob-body .offer-area{
+        font-size: .8rem;
+    }
+    .order-bump-inline .ob-body .offer-image
+    .order-bump-modal-inner .ob-body .offer-image{
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+    .order-bump-inline .ob-body .offer-area .old-price:before,
+    .order-bump-inline .ob-body .offer-area .old-price:after
+    .order-bump-modal-inner .ob-body .offer-area .old-price:before,
+    .order-bump-modal-inner .ob-body .offer-area .old-price:after{
+        width: 40px;
+    }
+    .ob-list {
+        font-size: 1rem;
+    }
+}
+
+.twom-section {
+    /*margin: 1.2rem;*/
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+
+    .plan-select {
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+            position: relative;
+            border: 2px solid #AAAAAA;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+
+            .left-wrapper {
+                flex: 1 1 auto;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    fill: transparent;
+                    border: 2px solid #AAAAAA;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                }
+            }
+            .special-offer {
+                position: absolute;
+                bottom: -1.3rem;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                padding:.5rem 1rem;
+                margin-bottom: 0;
+                border-radius: 8px;
+                background-color: #F9464B;
+                color: white;
+                max-width: 16rem;
+                text-align: center;
+            }
+        }
+        input[type="radio"]:checked + label {
+            border: 2px solid #F9464B;
+            .left-wrapper {
+                svg {
+                    fill: #68C553;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .twom-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        .special-offer {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{{>header}}
+      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; background-color: {{>table-header-color}}; margin: 0 0 20px 0; border: {{>border-style}};" bgcolor="{{>table-header-color}}">
+          <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+              <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                      <tr style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; margin: 0;">
+                          <td style="font-family: {{>font}}; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0px;" valign="top">
+                              <h2 style="font-family: {{>font}}; box-sizing: border-box; margin: 0;font-size: 16px;">
+                                  {{translate "Hello"}} {{account.contact.first}} {{account.contact.last}},
+                              </h2>
+                              <h4 style="margin: 5px 0;">
+                                  {{#if subscription.autoRenew}}
+                                      {{translate "your payment for subscription to"}} "{{{subscription.display}}}" {{translate "will be automatically processed on"}} {{{subscription.nextChargeDateDisplay}}} ({{subscription.nextChargeTotalDisplay}}).
+                                      <br>
+                                      {{translate "Please verify your payment details to ensure successful transaction and uninterrupted delivery"}}.
+                                  {{else}}
+                                      {{translate "your subscription to"}} "{{{subscription.display}}}" ({{subscription.nextChargeTotalDisplay}}) {{translate "requires you to pay manually on or before"}} {{{subscription.nextChargeDateDisplay}}}.
+                                      <br>
+                                      {{translate "Please follow the Manage Your Payment Details link below to securely access and pay manually"}}.
+                                  {{/if}}
+                              </h4>
+                              <a href="{{account.url}}" style="text-decoration: none; color: #337ab7;">{{translate "Manage Your Payment Details"}}</a>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+{{>footer}}

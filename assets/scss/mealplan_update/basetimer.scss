@@ -1,0 +1,45 @@
+@import 'variable';
+
+.base-timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+    .base-timer__svg {
+        /*transform: scale(0.6);*/
+    }
+    .base-timer__circle {
+        fill: none;
+        stroke: none;
+    }
+    .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: #E7E7EC;
+    }
+    .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        /*transition: 1s ease stroke-dashoffset;*/
+        fill-rule: nonzero;
+        stroke: currentColor;
+        color: $color-base-timer;
+    }
+    .base-timer__label {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-direction: column;
+
+        .label-text {
+            color: $color-base-timer;
+            font-family: 'Proxima Nova Bold';
+        }
+    }
+}
